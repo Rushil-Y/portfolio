@@ -1,29 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import CareerClip from "./components/CareerClip"; // new page
+import CareerClip from "./components/CareerClip";
+import HomePage from "./components/HomePage"; // new component
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <About />
-              <Projects />
-              <Skills />
-              <Contact />
-            </>
-          }
-        />
+        {/* Home page with all sections */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* Career highlights page */}
         <Route path="/career" element={<CareerClip />} />
       </Routes>
     </Router>

@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <section
-      id="hero"
+      id="home"
       className="flex flex-col items-center justify-center text-center py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-100 to-white"
     >
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">

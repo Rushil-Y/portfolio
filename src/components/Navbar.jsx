@@ -1,23 +1,30 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const [menuHeight, setMenuHeight] = useState(0);
 
-  const handleScroll = (to) => {
-    if (location.pathname === "/") {
-      const element = document.getElementById(to);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-        setIsOpen(false);
-      }
+  const scrollToSection = (to) => {
+    const element = document.getElementById(to);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false);
     }
   };
 
-  // Animate menu height when opening/closing
+  const handleScroll = (to) => {
+    if (location.pathname === "/") {
+      scrollToSection(to);
+    } else {
+      // Navigate to home and pass section to scroll to
+      navigate("/", { state: { scrollTo: to } });
+    }
+  };
+
   useEffect(() => {
     if (menuRef.current) {
       if (isOpen) {
@@ -41,7 +48,7 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            {["hero", "about", "projects", "skills", "contact"].map(
+            {["home", "about", "projects", "skills", "contact"].map(
               (section) => (
                 <span
                   key={section}
@@ -102,14 +109,14 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown with slide animation */}
+      {/* Mobile Menu Dropdown */}
       <div
         ref={menuRef}
         style={{ maxHeight: `${menuHeight}px` }}
         className="md:hidden overflow-hidden transition-max-height duration-300 ease-in-out bg-white border-t border-gray-200"
       >
         <div className="flex flex-col px-4 py-2 space-y-2">
-          {["hero", "about", "projects", "skills", "contact"].map((section) => (
+          {["home", "about", "projects", "skills", "contact"].map((section) => (
             <span
               key={section}
               onClick={() => handleScroll(section)}
