@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import CareerClip from "./components/CareerClip";
-import HomePage from "./components/HomePage"; // new component
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
