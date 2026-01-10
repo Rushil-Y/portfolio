@@ -15,10 +15,10 @@ function Projects() {
       live: "#",
     },
     {
-      title: "Shoeplex E-Commerce",
+      title: "Pig game App",
       description:
-        "An e-commerce website for selling shoes built with WordPress & WooCommerce, featuring categories, products, and payment integration.",
-      github: "#",
+        "Pig Game is a turn-based dice game where players roll to score points or hold to avoid losing their turn. The first player to reach the winning score wins.",
+      github: "https://github.com/Rushil-Y/Pigapp",
       live: "#",
     },
   ];
