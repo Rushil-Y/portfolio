@@ -5,7 +5,7 @@ function Projects() {
       description:
         "Employee Management System – A full-stack web application built with React, Node.js, and GraphQL that allows users to manage employee records. The system uses MongoDB Atlas for data storage and is deployed on Vercel.",
       github: "https://github.com/Rushil-Y/EMS-UI",
-      live: "https://rushils-ems-ui.vercel.app/#/employees",
+      live: "https://rushils-ems-ui.vercel.app/#/",
     },
     {
       title: "EText Manager (MERN Stack)",
