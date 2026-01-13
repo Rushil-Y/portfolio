@@ -1,25 +1,25 @@
 function Projects() {
   const projects = [
     {
+      title: "Employee Management System",
+      description:
+        "Employee Management System – A full-stack web application built with React, Node.js, and GraphQL that allows users to manage employee records. The system uses MongoDB Atlas for data storage and is deployed on Vercel.",
+      github: "https://github.com/Rushil-Y/EMS-UI",
+      live: "https://rushils-ems-ui.vercel.app/#/employees",
+    },
+    {
       title: "EText Manager (MERN Stack)",
       description:
         "A full-stack eTextbook manager built with MongoDB, Express, React, and Node.js. Users can browse, donate, and track reading progress.",
-      github: "https://github.com/yourusername/etext-manager",
-      live: "#",
-    },
-    {
-      title: "Tip Calculator App",
-      description:
-        "A lightweight JavaScript app to calculate tips and split bills among friends.",
-      github: "https://github.com/yourusername/tip-calculator",
-      live: "#",
+      github: "https://github.com/Rushil-Y/eText-Frontend",
+      live: "https://rushils-e-text.vercel.app/",
     },
     {
       title: "Pig game App",
       description:
         "Pig Game is a turn-based dice game where players roll to score points or hold to avoid losing their turn. The first player to reach the winning score wins.",
       github: "https://github.com/Rushil-Y/Pigapp",
-      live: "#",
+      live: "https://rushils-pigapp.vercel.app/",
     },
   ];
 
